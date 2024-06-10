@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="gauge-container">
+        <h2>inclinacion</h2>
+        <div id="temperaturaGauge"></div>
+    </div>
+    <script src="justgage-1.2.2/raphael-2.1.4.min.js"></script>
+    <script src="justgage-1.2.2/justgage.js"></script>
+    <script>
+        let temperaturaGauge = new JustGage({
+            id: "temperaturaGauge",
+            value: 2,
+            min: 0,
+            max: 5,
+            Symbol: "°",
+            pointer: true,
+            gaugeWidthScale: 0.6,
+            pointerOptions: {
+                toplenth: -15,
+                bottomlength: 10,
+                bottomwidth: 12,
+                color: '#8e8e93',
+                stroke: '#ffffff',
+                stroke_width: 3,
+                stoke_linecap: 'round'
+            },
+            counter: true
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Document</title>
+</head>
+<body>
+<div style=text-align:center>
+<h1>ESP32 control panel</h1>
+<h3>led</h3>
+<button onclick=turnOn()>encender</button>
+<button onclick=turnOff()>apagar</button>
+</div>
+<script>let socketConnetion=new WebSocket(`ws://${location.hostname}:81/`);const turnOff=()=>socketConnetion.send("ledoff"),turnOn=()=>socketConnetion.send("ledon")</script>
+</body>
+</html>
